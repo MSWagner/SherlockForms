@@ -24,32 +24,14 @@ let package = Package(
         .target(
             name: "SherlockHUD",
             dependencies: [],
-            swiftSettings: [
-                .unsafeFlags([
-                    "-Xfrontend", "-warn-concurrency",
-                    "-Xfrontend", "-enable-actor-data-race-checks",
-                ])
-            ]
         ),
         .target(
             name: "SherlockForms",
             dependencies: ["SherlockHUD"],
-            swiftSettings: [
-                .unsafeFlags([
-                    "-Xfrontend", "-warn-concurrency",
-                    "-Xfrontend", "-enable-actor-data-race-checks",
-                ])
-            ]
         ),
         .target(
             name: "SherlockDebugForms",
             dependencies: ["SherlockForms"],
-            swiftSettings: [
-                .unsafeFlags([
-                    "-Xfrontend", "-warn-concurrency",
-                    "-Xfrontend", "-enable-actor-data-race-checks",
-                ])
-            ]
         ),
     ]
 )
